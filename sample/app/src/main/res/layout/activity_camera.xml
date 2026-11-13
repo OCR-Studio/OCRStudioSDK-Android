@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CAMERA SCREEN -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.camera.view.PreviewView>
+
+    <!-- FRAME DRAWINGS OVER THE CAMERA SCREEN -->
+    <RelativeLayout
+        android:id="@+id/drawing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+    </RelativeLayout>
+
+    <!-- INSTRUCTION TEXT -->
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#5E000000"
+        android:gravity="center"
+        android:lines="1"
+        android:text="instruction"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFF00" />
+
+    <!-- LIVENESS INSTRUCTION TEXT -->
+    <TextView
+        android:id="@+id/liveness_text"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#5E000000"
+        android:gravity="center"
+        android:lines="1"
+        android:text="liveness"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFF00" />
+
+    <!-- LIVENESS MASK -->
+    <ImageView
+        android:id="@+id/liveness_mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- START BUTTON -->
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/border"
+        android:enabled="true"
+        android:onClick="onStartClick"
+        android:text="START"
+        android:textColor="@android:color/white" />
+
+    <!-- ERROR MESSAGE -->
+    <TextView
+        android:id="@+id/error"
+        android:text="Errror message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/colorError"
+        android:visibility="gone"/>
+
+</FrameLayout>
